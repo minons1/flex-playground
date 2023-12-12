@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      background-color: black;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      padding: 0;
+    }
+    #participants {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+    .sharescreen {
+      width: 90%;
+      height: 50%;
+      background-color: #e321e3;
+    }
+    .participant-container {
+      display: flex;
+      justify-content: space-around;
+      width: 90%;
+      height: 50%;
+    }
+    .participant {
+      width: 30%;
+      height: 100%;
+      background-color: #f8a677;
+    }
+  </style>
+</head>
+<body>
+  <div id="participants">
+    <div class="sharescreen">Text</div>
+    <div class="participant-container">
+      <div class="participant">One</div>
+      <div class="participant">Two</div>
+      <div class="participant">Three</div>
+    </div>
+  </div>
+  <div style="position: absolute; right: 0; bottom: 0; z-index: 9999; width: 200px; height: 200px; border: 1px solid black; padding: 20px; background-color: white;">
+    This is your modal content!
+  </div>
+</body>
+</html>
