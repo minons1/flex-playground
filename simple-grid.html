@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        color: white;
+      }
+      #box {
+        aspect-ratio: 16 /9;
+        width: 90%;
+        display: grid;
+        align-items: center;
+        justify-content: space-between;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 10px;
+        border: solid;
+        border-color: yellowgreen;
+      }
+      .participant {
+        aspect-ratio: 16/9;
+
+        border: solid;
+        border-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='box'>
+      <div class='participant'>One</div>
+      <div class='participant'>Two</div>
+    </div>
+  </body>
+</html>

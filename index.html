@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style.css">
+
+    <style>
+      body {
+        background-color: black;
+        color: white;
+        font-family: sans-serif;
+      }
+      #buttons {
+        border: solid;
+        border-color: 'white';
+        margin: '20px';
+      }
+      #participants {
+        display: flex;
+        flex-wrap: wrap;
+        height: 100vh;
+      }
+
+      .participant {
+        flex: 1 0 33.33%;
+        border: solid;
+        border-color: white;
+        position: relative;
+        padding-bottom: 56.25%; /* for 16:9 aspect ratio */
+        word-break: break-all;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .participant-content {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div id='buttons'>
+      <button id='plus'>+</button>
+      <button id='minus'>-</button>
+    </div>
+    <div id='participants'></div>
+    <script>
+      let i = 0
+      document.getElementById('plus').addEventListener('click', () => {
+        const div = document.createElement('div')
+        div.className = 'participant'
+        div.id = i
+
+        const content = document.createElement('div')
+        content.className = 'participant-content'
+        content.textContent = `Kotak ke - ${i++} ksdjfhadksjfhaksdjfhakjfhaksdjfhadskjfhdskjfh`
+
+        div.appendChild(content)
+        document.getElementById('participants').appendChild(div)
+      })
+
+      document.getElementById('minus').addEventListener('click', () => {
+        const div = document.getElementById((--i).toString())
+        document.getElementById('participants').removeChild(div)
+      })
+    </script>
+
+  </body>
+</html>
